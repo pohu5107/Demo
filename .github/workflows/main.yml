@@ -9,11 +9,11 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest # Chạy trên máy ảo Linux của GitHub
 
     strategy:
       matrix:
-        node-version: [18.x] # Chạy trên máy ảo Linux của GitHub
+        node-version: [18.x] 
 
     steps:
     - name: Checkout code
