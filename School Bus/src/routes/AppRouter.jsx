@@ -37,19 +37,7 @@ export default function AppRouter() {
         <Route path="/unauthorized" element={<UnauthorizedPage />} />
 
         {/* --- Admin Protected Routes --- */}
-        <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<Navigate to="/admin/mapview" replace />} />
-            <Route path="mapview" element={<MapPage />} />
-            <Route path="routes" element={<RoutePage />} />
-            <Route path="buses" element={<BusesPage />} />
-            <Route path="schedule" element={<Schedule />} />
-            <Route path="drivers" element={<DriverPage />} />
-            <Route path="students" element={<StudentsPage />} />
-            <Route path="parents" element={<ParentsPage />} />
-            <Route path="user" element={<UserPage />} />
-          </Route>
-        </Route>
+        <Rout
 
         {/* --- Driver Protected Routes --- */}
         <Route element={<ProtectedRoute allowedRoles={['driver']} />}>
